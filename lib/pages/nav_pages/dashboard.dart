@@ -21,7 +21,6 @@ class _DashboardState extends State<Dashboard> {
 
   @override
   Widget build(BuildContext context) {
-    
     return Scaffold(
       body: Container(
         child: ListView(
@@ -49,6 +48,7 @@ class _DashboardState extends State<Dashboard> {
               ),
             ),
             newArrivalsMethod(),
+            Divider(thickness: 10,),
             Padding(
               padding: const EdgeInsets.all(16.0),
               child: Row(
@@ -72,22 +72,91 @@ class _DashboardState extends State<Dashboard> {
               child: ListView(
                 shrinkWrap: true,
                 children: [
-                  ListTile(leading: SizedBox(
-                    height: 40,
-                    child: Container(
-                      child: ClipRRect(
-                        borderRadius: BorderRadius.circular(5),
-                        child: Image.network(imgList[1])),)),
-                  title:Text('VFA Boost'),
-                  subtitle: Text('Back packs'),
-                  trailing: TextButton(onPressed: (){},
-                   child: Text('GH 53.00',style: TextStyle(color: Colors.white),),
-                   
-                   ),
-                  
-                  )
+                  ListTile(
+                    leading: SizedBox(
+                        height: 40,
+                        child: Container(
+                          child: ClipRRect(
+                              borderRadius: BorderRadius.circular(5),
+                              child: Image.network(imgList[1])),
+                        )),
+                    title: Text('VFA Boost'),
+                    subtitle: Text('Back packs'),
+                    trailing: TextButton(
+                      style: ButtonStyle(
+                        shape:
+                            MaterialStateProperty.all<RoundedRectangleBorder>(
+                                RoundedRectangleBorder(
+                                    borderRadius: BorderRadius.circular(9.0))),
+                      ),
+                      onPressed: () {},
+                      child: Padding(
+                        padding: const EdgeInsets.symmetric(horizontal: 9),
+                        child: Text(
+                          'GH 53.00',
+                          style: TextStyle(color: Colors.white),
+                        ),
+                      ),
+                    ),
+                  ),
+                  Divider(),
+                  ListTile(
+                    leading: SizedBox(
+                        height: 40,
+                        child: Container(
+                          child: ClipRRect(
+                              borderRadius: BorderRadius.circular(5),
+                              child: Image.network(imgList[1])),
+                        )),
+                    title: Text('VFA Boost'),
+                    subtitle: Text('Back packs'),
+                    trailing: TextButton(
+                      style: ButtonStyle(
+                        shape:
+                            MaterialStateProperty.all<RoundedRectangleBorder>(
+                                RoundedRectangleBorder(
+                                    borderRadius: BorderRadius.circular(9.0))),
+                      ),
+                      onPressed: () {},
+                      child: Padding(
+                        padding: const EdgeInsets.symmetric(horizontal: 9),
+                        child: Text(
+                          'GH 53.00',
+                          style: TextStyle(color: Colors.white),
+                        ),
+                      ),
+                    ),
+                  ),
+                  Divider(),
+                  ListTile(
+                    leading: SizedBox(
+                        height: 40,
+                        child: Container(
+                          child: ClipRRect(
+                              borderRadius: BorderRadius.circular(5),
+                              child: Image.network(imgList[1])),
+                        )),
+                    title: Text('VFA Boost'),
+                    subtitle: Text('Back packs'),
+                    trailing: TextButton(
+                      style: ButtonStyle(
+                        shape:
+                            MaterialStateProperty.all<RoundedRectangleBorder>(
+                                RoundedRectangleBorder(
+                                    borderRadius: BorderRadius.circular(9.0))),
+                      ),
+                      onPressed: () {},
+                      child: Padding(
+                        padding: const EdgeInsets.symmetric(horizontal: 9),
+                        child: Text(
+                          'GH 53.00',
+                          style: TextStyle(color: Colors.white),
+                        ),
+                      ),
+                    ),
+                  ),
                 ],
-                ),
+              ),
             )
           ],
         ),
@@ -97,38 +166,37 @@ class _DashboardState extends State<Dashboard> {
 
   Container newArrivalsMethod() {
     return Container(
-            height: 500,
-            child: GridView.builder(
-                itemCount: 4,
-                gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
-                  crossAxisSpacing: 10,
-                  crossAxisCount: 2,
+      height: 450,
+      child: GridView.builder(
+          itemCount: 4,
+          gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
+            crossAxisSpacing: 10,
+            crossAxisCount: 2,
+          ),
+          itemBuilder: (BuildContext context, int index) {
+            return new Container(
+              child: new GridTile(
+                footer: Row(
+                  mainAxisAlignment: MainAxisAlignment.center,
+                  children: [
+                    Text('T- shirt'),
+                  ],
                 ),
-                itemBuilder: (BuildContext context, int index) {
-                  return new Container(
-                    child: new GridTile(
-                     
-                      footer:  Row(
-                        mainAxisAlignment: MainAxisAlignment.center,
-                        children: [
-                          Text('T- shirt'),
-                        ],
-                      ),
-                      child: Container(
-                        margin: EdgeInsets.all(16),
-                        decoration: BoxDecoration(
-                          borderRadius: BorderRadius.circular(15.0),
-                          image: DecorationImage(
-                              image: NetworkImage(
-                                imgList[index],
-                              ),
-                              fit: BoxFit.cover),
+                child: Container(
+                  margin: EdgeInsets.all(16),
+                  decoration: BoxDecoration(
+                    borderRadius: BorderRadius.circular(15.0),
+                    image: DecorationImage(
+                        image: NetworkImage(
+                          imgList[index],
                         ),
-                        // child: Image.network(imgList[index]),
-                      ), //just for testing, will fill with image later
-                    ),
-                  );
-                }),
-          );
+                        fit: BoxFit.cover),
+                  ),
+                  // child: Image.network(imgList[index]),
+                ), //just for testing, will fill with image later
+              ),
+            );
+          }),
+    );
   }
 }

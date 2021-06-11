@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/widgets.dart';
+import 'package:sassty/pages/nav_pages/categories.dart';
 import 'package:sassty/pages/nav_pages/dashboard.dart';
 
 class HomePage extends StatefulWidget {
@@ -15,10 +16,7 @@ class _HomePageState extends State<HomePage> {
       TextStyle(fontSize: 30, fontWeight: FontWeight.bold);
   static const List<Widget> _widgetOptions = <Widget>[
     Dashboard(),
-    Text(
-      'Index 1: Busines',
-      style: optionStyle,
-    ),
+    CategoryPage(),
     Text(
       'Index 2: School',
       style: optionStyle,
