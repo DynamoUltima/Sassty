@@ -42,7 +42,7 @@ class _CategoryPageState extends State<CategoryPage> {
                         borderRadius: BorderRadius.circular(16.0)),
                     alignment: Alignment.center,
                     child: Center(
-                      child: Text('Fashion',style: TextStyle(color: Colors.white,fontSize: 24,fontWeight: FontWeight.bold),),
+                      child: Text('Fashion '+_selectedIndex.toString(),style: TextStyle(color: Colors.white,fontSize: 24,fontWeight: FontWeight.bold),),
                     ),
                   );
                 })),
@@ -51,50 +51,3 @@ class _CategoryPageState extends State<CategoryPage> {
   }
 }
 
-/*
-Container(
-               height: 400,
-              width: screenWidth * 0.8,
-              decoration: BoxDecoration(
-                  color: Colors.blue,
-                  shape: BoxShape.rectangle,
-                  borderRadius: BorderRadius.circular(8.0)),
-              alignment: Alignment.center,
-              child: Center(
-                child: Padding(
-                  padding: const EdgeInsets.all(16.0),
-                  child: Text('Fashion'),
-                ),
-              ),
-            ),
-            Container(
-              width: screenWidth * 0.8,
-               height: 00,
-              decoration: BoxDecoration(
-                  color: Colors.blue,
-                  shape: BoxShape.rectangle,
-                  borderRadius: BorderRadius.circular(8.0)),
-              alignment: Alignment.center,
-              child: Center(
-                child: Padding(
-                  padding: const EdgeInsets.all(16.0),
-                  child: Text('Fashion'),
-                ),
-              ),
-            ),
-            Container(
-              width: screenWidth * 0.8,
-              height: 200,
-              decoration: BoxDecoration(
-                  color: Colors.blue,
-                  shape: BoxShape.rectangle,
-                  borderRadius: BorderRadius.circular(8.0)),
-              alignment: Alignment.center,
-              child: Center(
-                child: Padding(
-                  padding: const EdgeInsets.all(1.0),
-                  child: Text('Fashion'),
-                ),
-              ),
-            )
-*/

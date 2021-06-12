@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/widgets.dart';
+import 'package:sassty/pages/nav_pages/cart.dart';
 import 'package:sassty/pages/nav_pages/categories.dart';
 import 'package:sassty/pages/nav_pages/dashboard.dart';
 
@@ -17,10 +18,7 @@ class _HomePageState extends State<HomePage> {
   static const List<Widget> _widgetOptions = <Widget>[
     Dashboard(),
     CategoryPage(),
-    Text(
-      'Index 2: School',
-      style: optionStyle,
-    ),
+    CartPage(),
     Text(
       'Index 3: Account',
       style: optionStyle,
