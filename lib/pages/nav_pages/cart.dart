@@ -44,10 +44,17 @@ class _CartPageState extends State<CartPage> {
                 Padding(
                   padding: const EdgeInsets.symmetric(horizontal: 16),
                   child: Row(
-                    children: [Text('you have 3 items in your bag',style: TextStyle(fontSize: 18,color: Colors.grey),)],
+                    children: [
+                      Text(
+                        'you have 3 items in your bag',
+                        style: TextStyle(fontSize: 18, color: Colors.grey),
+                      )
+                    ],
                   ),
                 ),
-                Divider(thickness: 1,),
+                Divider(
+                  thickness: 1,
+                ),
               ],
             ),
           ),
@@ -135,6 +142,78 @@ class _CartPageState extends State<CartPage> {
                   }),
             ),
           ),
+          Container(
+            color: Colors.grey[100],
+            padding: EdgeInsets.all(8),
+            child: Column(
+              children: [
+                Container(
+                  child: Column(
+                    children: [
+                      Padding(
+                        padding: const EdgeInsets.all(8.0),
+                        child: Row(
+                          mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                          children: [
+                            Padding(
+                              padding: const EdgeInsets.symmetric(horizontal: 16),
+                              child: Text('Order Amount:',style: TextStyle(fontSize: 24,fontWeight: FontWeight.bold),),
+                            ),
+                            Padding(
+                              padding: const EdgeInsets.symmetric(horizontal: 16),
+                              child: Text('GHC 152',style: TextStyle(fontSize: 24,fontWeight: FontWeight.bold),),
+                            )
+                          ],
+                        ),
+                      ),
+                      Padding(
+                        padding: const EdgeInsets.all(8.0),
+                        child: Row(
+                          mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                          children: [
+                            Padding(
+                              padding: const EdgeInsets.symmetric(horizontal: 16),
+                              child: Text('Your total amount of Ddscount:',style: TextStyle(fontSize: 18,),),
+                            ),
+                             Padding(
+                              padding: const EdgeInsets.symmetric(horizontal: 16),
+                              child: Text('GHC 55',style: TextStyle(fontSize: 18,),),
+                            )
+                          ],
+                        ),
+                      ),
+                    ],
+                  ),
+                ),
+                SizedBox(
+                  width: screenWidth * 0.8,
+                  child: TextButton(
+                    onPressed: () {},
+                    child: Padding(
+                      padding: const EdgeInsets.symmetric(
+                        horizontal: 16,
+                        vertical: 2.5,
+                      ),
+                      child: Text(
+                        'Checkout',
+                        style: TextStyle(
+                            color: Colors.white,
+                            fontWeight: FontWeight.bold,
+                            fontSize: 24),
+                      ),
+                    ),
+                    style: ButtonStyle(
+                      backgroundColor: MaterialStateProperty.all(Colors.pink),
+                      // textStyle:MaterialStateProperty.all(TextStyle(color: Colors.white)),
+                      shape: MaterialStateProperty.all<RoundedRectangleBorder>(
+                          RoundedRectangleBorder(
+                              borderRadius: BorderRadius.circular(9.0))),
+                    ),
+                  ),
+                ),
+              ],
+            ),
+          )
         ],
       ),
     );

@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/widgets.dart';
+import 'package:sassty/pages/nav_pages/account.dart';
 import 'package:sassty/pages/nav_pages/cart.dart';
 import 'package:sassty/pages/nav_pages/categories.dart';
 import 'package:sassty/pages/nav_pages/dashboard.dart';
@@ -19,10 +20,7 @@ class _HomePageState extends State<HomePage> {
     Dashboard(),
     CategoryPage(),
     CartPage(),
-    Text(
-      'Index 3: Account',
-      style: optionStyle,
-    ),
+    AccountPage(),
   ];
   @override
   Widget build(BuildContext context) {
