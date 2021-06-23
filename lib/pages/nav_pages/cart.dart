@@ -156,12 +156,22 @@ class _CartPageState extends State<CartPage> {
                           mainAxisAlignment: MainAxisAlignment.spaceBetween,
                           children: [
                             Padding(
-                              padding: const EdgeInsets.symmetric(horizontal: 16),
-                              child: Text('Order Amount:',style: TextStyle(fontSize: 24,fontWeight: FontWeight.bold),),
+                              padding:
+                                  const EdgeInsets.symmetric(horizontal: 16),
+                              child: Text(
+                                'Order Amount:',
+                                style: TextStyle(
+                                    fontSize: 24, fontWeight: FontWeight.bold),
+                              ),
                             ),
                             Padding(
-                              padding: const EdgeInsets.symmetric(horizontal: 16),
-                              child: Text('GHC 152',style: TextStyle(fontSize: 24,fontWeight: FontWeight.bold),),
+                              padding:
+                                  const EdgeInsets.symmetric(horizontal: 16),
+                              child: Text(
+                                'GHC 152',
+                                style: TextStyle(
+                                    fontSize: 24, fontWeight: FontWeight.bold),
+                              ),
                             )
                           ],
                         ),
@@ -172,12 +182,24 @@ class _CartPageState extends State<CartPage> {
                           mainAxisAlignment: MainAxisAlignment.spaceBetween,
                           children: [
                             Padding(
-                              padding: const EdgeInsets.symmetric(horizontal: 16),
-                              child: Text('Your total amount of Ddscount:',style: TextStyle(fontSize: 18,),),
+                              padding:
+                                  const EdgeInsets.symmetric(horizontal: 16),
+                              child: Text(
+                                'Your total amount of Ddscount:',
+                                style: TextStyle(
+                                  fontSize: 18,
+                                ),
+                              ),
                             ),
-                             Padding(
-                              padding: const EdgeInsets.symmetric(horizontal: 16),
-                              child: Text('GHC 55',style: TextStyle(fontSize: 18,),),
+                            Padding(
+                              padding:
+                                  const EdgeInsets.symmetric(horizontal: 16),
+                              child: Text(
+                                'GHC 55',
+                                style: TextStyle(
+                                  fontSize: 18,
+                                ),
+                              ),
                             )
                           ],
                         ),
@@ -206,8 +228,10 @@ class _CartPageState extends State<CartPage> {
                       backgroundColor: MaterialStateProperty.all(Colors.pink),
                       // textStyle:MaterialStateProperty.all(TextStyle(color: Colors.white)),
                       shape: MaterialStateProperty.all<RoundedRectangleBorder>(
-                          RoundedRectangleBorder(
-                              borderRadius: BorderRadius.circular(9.0))),
+                        RoundedRectangleBorder(
+                          borderRadius: BorderRadius.circular(9.0),
+                        ),
+                      ),
                     ),
                   ),
                 ),
