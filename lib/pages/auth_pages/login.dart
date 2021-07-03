@@ -136,7 +136,7 @@ class _LoginState extends State<Login> {
               mainAxisAlignment: MainAxisAlignment.center,
               children: [
                 Text(
-                  'Forgot Password ?',
+                  'Forgot Password?',
                   style: TextStyle(color: Colors.blue, fontSize: 20),
                 ),
               ],

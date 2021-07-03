@@ -1,5 +1,6 @@
 import 'package:carousel_slider/carousel_slider.dart';
 import 'package:flutter/material.dart';
+import 'package:sassty/pages/product_pages/product_details.dart';
 import 'package:sassty/shared/carousel.dart';
 
 class Dashboard extends StatefulWidget {
@@ -48,7 +49,9 @@ class _DashboardState extends State<Dashboard> {
               ),
             ),
             newArrivalsMethod(),
-            Divider(thickness: 10,),
+            Divider(
+              thickness: 10,
+            ),
             Padding(
               padding: const EdgeInsets.all(16.0),
               child: Row(
@@ -175,25 +178,30 @@ class _DashboardState extends State<Dashboard> {
           ),
           itemBuilder: (BuildContext context, int index) {
             return new Container(
-              child: new GridTile(
-                footer: Row(
-                  mainAxisAlignment: MainAxisAlignment.center,
-                  children: [
-                    Text('T- shirt'),
-                  ],
-                ),
-                child: Container(
-                  margin: EdgeInsets.all(16),
-                  decoration: BoxDecoration(
-                    borderRadius: BorderRadius.circular(15.0),
-                    image: DecorationImage(
-                        image: NetworkImage(
-                          imgList[index],
-                        ),
-                        fit: BoxFit.cover),
+              child: GestureDetector(
+                onTap: () {
+                  Navigator.push(context, MaterialPageRoute(builder: (context)=>ProductDetailsPage()));
+                },
+                child: new GridTile(
+                  footer: Row(
+                    mainAxisAlignment: MainAxisAlignment.center,
+                    children: [
+                      Text('T- shirt'),
+                    ],
                   ),
-                  // child: Image.network(imgList[index]),
-                ), //just for testing, will fill with image later
+                  child: Container(
+                    margin: EdgeInsets.all(16),
+                    decoration: BoxDecoration(
+                      borderRadius: BorderRadius.circular(15.0),
+                      image: DecorationImage(
+                          image: NetworkImage(
+                            imgList[index],
+                          ),
+                          fit: BoxFit.cover),
+                    ),
+                    // child: Image.network(imgList[index]),
+                  ), //just for testing, will fill with image later
+                ),
               ),
             );
           }),
