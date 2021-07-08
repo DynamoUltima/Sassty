@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_number_picker/flutter_number_picker.dart';
+import 'package:sassty/pages/order_pages/order_summary.dart';
 
 class CartPage extends StatefulWidget {
   const CartPage({Key? key}) : super(key: key);
@@ -142,6 +143,8 @@ class _CartPageState extends State<CartPage> {
                   }),
             ),
           ),
+         
+
           Container(
             color: Colors.grey[100],
             padding: EdgeInsets.all(8),
@@ -185,7 +188,7 @@ class _CartPageState extends State<CartPage> {
                               padding:
                                   const EdgeInsets.symmetric(horizontal: 16),
                               child: Text(
-                                'Your total amount of Ddscount:',
+                                'Your total amount of Discount:',
                                 style: TextStyle(
                                   fontSize: 18,
                                 ),
@@ -210,7 +213,10 @@ class _CartPageState extends State<CartPage> {
                 SizedBox(
                   width: screenWidth * 0.8,
                   child: TextButton(
-                    onPressed: () {},
+                    onPressed: () {
+                      Navigator.of(context).push(MaterialPageRoute(
+                          builder: (context) => OrderSummary()));
+                    },
                     child: Padding(
                       padding: const EdgeInsets.symmetric(
                         horizontal: 16,
