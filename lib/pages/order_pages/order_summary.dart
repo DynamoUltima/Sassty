@@ -1,6 +1,7 @@
 import 'dart:ui';
 
 import 'package:flutter/material.dart';
+import 'package:sassty/pages/order_pages/order_sucess.dart';
 
 class OrderSummary extends StatefulWidget {
   const OrderSummary({Key? key}) : super(key: key);
@@ -315,7 +316,10 @@ class _OrderSummaryState extends State<OrderSummary> {
                   SizedBox(
                     width: screenWidth * 0.8,
                     child: TextButton(
-                      onPressed: () {},
+                      onPressed: () {
+                        Navigator.of(context).push(MaterialPageRoute(
+                            builder: (coontext) => OrderSucessPage()));
+                      },
                       child: Padding(
                         padding: const EdgeInsets.symmetric(
                           horizontal: 16,
