@@ -33,6 +33,16 @@ class _HomePageState extends State<HomePage> {
     }
 
     return Scaffold(
+      appBar: AppBar(
+        title: Text('Sassty',style: TextStyle(color: Colors.pink,fontSize: 24,),),
+        centerTitle: true,
+        backgroundColor: Colors.white,
+        elevation: 1,
+        actions: [
+          IconButton(icon: Icon(Icons.search), onPressed: (){}),
+          IconButton(icon: Icon(Icons.shopping_basket_outlined), onPressed: (){}),
+        ],
+      ),
       body: Container(
         child: _widgetOptions.elementAt(_selectedIndex)
       ),

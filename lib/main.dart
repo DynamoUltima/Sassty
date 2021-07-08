@@ -22,15 +22,15 @@ class MyApp extends StatelessWidget {
         ))
 
       ),
-      home: MyHomePage(title: 'Sassty'),
+      home: MyHomePage(),
     );
   }
 }
 
 class MyHomePage extends StatefulWidget {
-  MyHomePage({Key? key, required this.title}) : super(key: key);
+  MyHomePage({Key? key, }) : super(key: key);
 
-  final String title;
+  
 
   @override
   _MyHomePageState createState() => _MyHomePageState();
@@ -40,16 +40,16 @@ class _MyHomePageState extends State<MyHomePage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(
-        title: Text(widget.title,style: TextStyle(color: Colors.pink,fontSize: 24,),),
-        centerTitle: true,
-        backgroundColor: Colors.white,
-        elevation: 1,
-        actions: [
-          IconButton(icon: Icon(Icons.search), onPressed: (){}),
-          IconButton(icon: Icon(Icons.shopping_basket_outlined), onPressed: (){}),
-        ],
-      ),
+      // appBar: AppBar(
+      //   title: Text(widget.title,style: TextStyle(color: Colors.pink,fontSize: 24,),),
+      //   centerTitle: true,
+      //   backgroundColor: Colors.white,
+      //   elevation: 1,
+      //   actions: [
+      //     IconButton(icon: Icon(Icons.search), onPressed: (){}),
+      //     IconButton(icon: Icon(Icons.shopping_basket_outlined), onPressed: (){}),
+      //   ],
+      // ),
       body: HomePage(),
     );
   }

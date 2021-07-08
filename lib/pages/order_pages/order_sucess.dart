@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
+import 'package:sassty/pages/home.dart';
 
 class OrderSucessPage extends StatefulWidget {
   const OrderSucessPage({Key? key}) : super(key: key);
@@ -14,14 +15,25 @@ class _OrderSucessPageState extends State<OrderSucessPage> {
     double screenWidth = MediaQuery.of(context).size.width;
     return Scaffold(
       appBar: AppBar(
-        title: Text('Success',style: TextStyle(color: Colors.black,fontSize: 24),),
+        title: Text(
+          'Success',
+          style: TextStyle(color: Colors.black, fontSize: 24),
+        ),
         centerTitle: true,
         backgroundColor: Colors.white,
         automaticallyImplyLeading: false,
         elevation: 1,
         actions: [
-          Icon(Icons.clear,color: Colors.grey,)
-
+          GestureDetector(
+            onTap: () {
+              Navigator.of(context)
+                  .pushReplacement(MaterialPageRoute(builder: (context) => HomePage()));
+            },
+            child: Icon(
+              Icons.clear,
+              color: Colors.grey,
+            ),
+          )
         ],
       ),
       body: Container(
@@ -50,8 +62,14 @@ class _OrderSucessPageState extends State<OrderSucessPage> {
               SizedBox(
                 height: 10,
               ),
-              Text('Your items are on the way',style: TextStyle(color: Colors.grey,fontSize: 22),),
-              Text('and should arrive shortly',style: TextStyle(color: Colors.grey,fontSize: 22),),
+              Text(
+                'Your items are on the way',
+                style: TextStyle(color: Colors.grey, fontSize: 22),
+              ),
+              Text(
+                'and should arrive shortly',
+                style: TextStyle(color: Colors.grey, fontSize: 22),
+              ),
               SizedBox(height: 20),
               SizedBox(
                 width: screenWidth * 0.7,
@@ -81,7 +99,9 @@ class _OrderSucessPageState extends State<OrderSucessPage> {
                   ),
                 ),
               ),
-              Spacer()
+              Spacer(
+                flex: 2,
+              )
             ],
           ),
         ),
