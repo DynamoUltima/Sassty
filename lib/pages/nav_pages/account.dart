@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:sassty/pages/auth_pages/login.dart';
+import 'package:sassty/pages/nav_pages/account_pages/wish_list.dart';
+import 'package:sassty/pages/order_pages/order_history.dart';
 
 class AccountPage extends StatefulWidget {
   const AccountPage({Key? key}) : super(key: key);
@@ -91,6 +93,9 @@ class _AccountPageState extends State<AccountPage> {
               thickness: 5,
             ),
             ListTile(
+              onTap: () {
+                Navigator.push(context, MaterialPageRoute(builder: (context)=>WishList()));
+              },
               contentPadding: EdgeInsets.only(right: 8, left: 16),
               dense: true,
               leading: Text(
@@ -119,6 +124,10 @@ class _AccountPageState extends State<AccountPage> {
             ListTile(
               contentPadding: EdgeInsets.only(right: 8, left: 16),
               dense: true,
+              onTap: () {
+                Navigator.of(context).push(
+                    MaterialPageRoute(builder: (context) => OrderHistory()));
+              },
               leading: Text(
                 'My Orders',
                 style: TextStyle(fontSize: 20, fontWeight: FontWeight.bold),
@@ -149,10 +158,8 @@ class _AccountPageState extends State<AccountPage> {
               margin: EdgeInsets.symmetric(horizontal: 32),
               child: TextButton(
                 onPressed: () {
-                  Navigator.push(
-                    context,
-                    MaterialPageRoute(builder: (context)=>Login())
-                  );
+                  Navigator.push(context,
+                      MaterialPageRoute(builder: (context) => Login()));
                 },
                 child: Padding(
                   padding: const EdgeInsets.symmetric(
