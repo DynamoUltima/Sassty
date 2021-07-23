@@ -123,7 +123,7 @@ class _WishListState extends State<WishList> {
                         ),
                       ),
                     );
-                    ;
+                    
                   }),
             ),
             Container(
