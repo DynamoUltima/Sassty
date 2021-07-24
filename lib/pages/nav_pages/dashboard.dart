@@ -173,6 +173,7 @@ class _DashboardState extends State<Dashboard> {
       child: GridView.builder(
           itemCount: 4,
           gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
+            // mainAxisExtent: 240,
             crossAxisSpacing: 10,
             crossAxisCount: 2,
           ),
@@ -183,10 +184,21 @@ class _DashboardState extends State<Dashboard> {
                   Navigator.push(context, MaterialPageRoute(builder: (context)=>ProductDetailsPage()));
                 },
                 child: new GridTile(
-                  footer: Row(
-                    mainAxisAlignment: MainAxisAlignment.center,
+                  footer: Column(
                     children: [
-                      Text('T- shirt'),
+                      
+                      Row(
+                        mainAxisAlignment: MainAxisAlignment.center,
+                        children: [
+                          Text('T- shirt'),
+                        ],
+                      ),
+                      Row(
+                        mainAxisAlignment: MainAxisAlignment.center,
+                        children: [
+                          Text('T- shirt'),
+                        ],
+                      ),
                     ],
                   ),
                   child: Container(

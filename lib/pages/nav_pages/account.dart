@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:sassty/pages/auth_pages/login.dart';
+import 'package:sassty/pages/nav_pages/account_pages/payment.dart';
 import 'package:sassty/pages/nav_pages/account_pages/wish_list.dart';
 import 'package:sassty/pages/order_pages/order_history.dart';
 
@@ -18,7 +19,9 @@ class _AccountPageState extends State<AccountPage> {
     return Scaffold(
       body: Container(
           height: screenHeight,
-          child: ListView(shrinkWrap: true, children: [
+          child: ListView(
+            shrinkWrap: true, 
+            children: [
             ListTile(
               dense: true,
               leading: Text(
@@ -65,6 +68,9 @@ class _AccountPageState extends State<AccountPage> {
             ),
             Divider(),
             ListTile(
+              onTap: (){
+                Navigator.push(context, MaterialPageRoute(builder: (context)=>PaymentPage()));
+              },
               contentPadding: EdgeInsets.only(right: 8, left: 16),
               dense: true,
               leading: Text(
@@ -84,7 +90,9 @@ class _AccountPageState extends State<AccountPage> {
                   ),
                   IconButton(
                     icon: Icon(Icons.chevron_right),
-                    onPressed: () {},
+                    onPressed: () {
+                      Navigator.push(context, MaterialPageRoute(builder: (context)=>PaymentPage()));
+                    },
                   )
                 ],
               ),
